@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsound_processor_core.a CMakeFiles/sound_processor_core.dir/src/parser.cpp.o CMakeFiles/sound_processor_core.dir/src/waveform.cpp.o CMakeFiles/sound_processor_core.dir/src/wavio.cpp.o CMakeFiles/sound_processor_core.dir/src/filters.cpp.o CMakeFiles/sound_processor_core.dir/src/pipeline.cpp.o CMakeFiles/sound_processor_core.dir/src/converter.cpp.o CMakeFiles/sound_processor_core.dir/src/producer.cpp.o CMakeFiles/sound_processor_core.dir/src/application.cpp.o
+/usr/bin/ranlib libsound_processor_core.a

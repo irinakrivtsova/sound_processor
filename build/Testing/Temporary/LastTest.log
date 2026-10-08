@@ -1,0 +1,59 @@
+Start testing: Jun 19 21:04 UTC
+----------------------------------------------------------
+1/1 Testing: sound_processor_tests
+1/1 Test: sound_processor_tests
+Command: "/home/student/se258-Irina-Krivtsova-iakrivtsova/tasks/sound_processor/build/sound_processor_tests"
+Directory: /home/student/se258-Irina-Krivtsova-iakrivtsova/tasks/sound_processor/build
+"sound_processor_tests" start time: Jun 19 21:04 UTC
+Output:
+----------------------------------------------------------
+[OK] ArgsParser returns noArgs for empty command line
+[OK] ArgsParser parses input output and filter descriptors
+[OK] ArgsParser rejects duplicated input flag
+[OK] Waveform stores metadata and samples
+[OK] Waveform rejects unsupported metadata
+[OK] Waveform replaces samples
+[OK] AmplFilter multiplies samples and clamps int16 range
+[OK] Normalize scales peak to requested part of int16 maximum
+[OK] Silence inserts zero samples
+[OK] Timestretch uses linear interpolation
+[OK] Lowpass averages samples with border extension
+[OK] SinGenFilter creates signal with requested duration
+[OK] AmGenFilter creates signal with requested duration
+[OK] FmGenFilter creates signal with requested duration
+[OK] Pipeline applies filters in order
+[OK] Pipeline rejects nullptr sound
+[OK] Converter creates pipeline from valid descriptors
+[OK] Converter reports unknown filter name
+[OK] Converter reports bad filter parameters
+[OK] WavWriter and WavReader roundtrip valid mono PCM WAV
+[OK] WavReader rejects invalid file
+Usage:
+  sound_processor [-i input.wav] [-o output.wav]
+                  [-f filter_name [filter_params...]]...
+
+Examples:
+  sound_processor -i input.wav -o output.wav -f ampl 0.8
+  sound_processor -o output.wav -f generator sin 440 2000
+
+Filters:
+  -f ampl factor
+  -f normalize [peak]
+  -f silence sec start end
+  -f silence ms start end
+  -f timestretch factor
+  -f lowpass window_size
+  -f generator sin frequency_hz duration_ms
+  -f generator am amplitude carrier_hz modulation_hz depth duration_ms
+  -f generator fm amplitude carrier_hz modulation_hz deviation_hz duration_ms
+[OK] Application returns help code without arguments
+[OK] Application can generate output WAV
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"sound_processor_tests" end time: Jun 19 21:04 UTC
+"sound_processor_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 19 21:04 UTC
